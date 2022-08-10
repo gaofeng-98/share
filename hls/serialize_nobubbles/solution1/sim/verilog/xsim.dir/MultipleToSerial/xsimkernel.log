@@ -1,0 +1,7 @@
+Running: xsim.dir/MultipleToSerial/xsimk -simmode gui -wdb MultipleToSerial.wdb -simrunnum 0 -socket 53965
+Design successfully loaded
+Design Loading Memory Usage: 30392 KB (Peak: 30392 KB)
+Design Loading CPU Usage: 40 ms
+Simulation completed
+Simulation Memory Usage: 125340 KB (Peak: 169660 KB)
+Simulation CPU Usage: 80 ms

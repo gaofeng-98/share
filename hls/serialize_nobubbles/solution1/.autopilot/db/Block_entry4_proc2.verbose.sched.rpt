@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'Block_entry4_proc2'
+================================================================
+* Date:           Tue Aug  2 23:46:31 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        serialize_nobubbles
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  0.677 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        3|        3|  30.000 ns|  30.000 ns|    3|    3|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.67>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%tmp = read i288 @_ssdm_op_Read.axis.volatile.i288P128A, i288 %input_r" [/proj/gsd/vivado/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 5 'read' 'tmp' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%trunc_ln14 = trunc i288 %tmp" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 6 'trunc' 'trunc_ln14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp_elements_addr = getelementptr i32 %tmp_elements, i64 0, i64 0" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 7 'getelementptr' 'tmp_elements_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.67ns)   --->   "%store_ln14 = store i32 %trunc_ln14, i3 %tmp_elements_addr" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 8 'store' 'store_ln14' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%tmp_s = partselect i32 @_ssdm_op_PartSelect.i32.i288.i32.i32, i288 %tmp, i32 32, i32 63" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 9 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp_elements_addr_1 = getelementptr i32 %tmp_elements, i64 0, i64 1" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 10 'getelementptr' 'tmp_elements_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.67ns)   --->   "%store_ln14 = store i32 %tmp_s, i3 %tmp_elements_addr_1" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 11 'store' 'store_ln14' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i32 @_ssdm_op_PartSelect.i32.i288.i32.i32, i288 %tmp, i32 64, i32 95" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 12 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i32 @_ssdm_op_PartSelect.i32.i288.i32.i32, i288 %tmp, i32 96, i32 127" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 13 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i32 @_ssdm_op_PartSelect.i32.i288.i32.i32, i288 %tmp, i32 128, i32 159" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 14 'partselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i32 @_ssdm_op_PartSelect.i32.i288.i32.i32, i288 %tmp, i32 160, i32 191" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 15 'partselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_5 = partselect i32 @_ssdm_op_PartSelect.i32.i288.i32.i32, i288 %tmp, i32 192, i32 223" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 16 'partselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_6 = partselect i32 @_ssdm_op_PartSelect.i32.i288.i32.i32, i288 %tmp, i32 224, i32 255" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 17 'partselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_elements_num = partselect i32 @_ssdm_op_PartSelect.i32.i288.i32.i32, i288 %tmp, i32 256, i32 287" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 18 'partselect' 'tmp_elements_num' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.67>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_elements_addr_2 = getelementptr i32 %tmp_elements, i64 0, i64 2" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 19 'getelementptr' 'tmp_elements_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.67ns)   --->   "%store_ln14 = store i32 %tmp_1, i3 %tmp_elements_addr_2" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 20 'store' 'store_ln14' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_elements_addr_3 = getelementptr i32 %tmp_elements, i64 0, i64 3" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 21 'getelementptr' 'tmp_elements_addr_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.67ns)   --->   "%store_ln14 = store i32 %tmp_2, i3 %tmp_elements_addr_3" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 22 'store' 'store_ln14' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
+
+State 3 <SV = 2> <Delay = 0.67>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_elements_addr_4 = getelementptr i32 %tmp_elements, i64 0, i64 4" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 23 'getelementptr' 'tmp_elements_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.67ns)   --->   "%store_ln14 = store i32 %tmp_3, i3 %tmp_elements_addr_4" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 24 'store' 'store_ln14' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_elements_addr_5 = getelementptr i32 %tmp_elements, i64 0, i64 5" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 25 'getelementptr' 'tmp_elements_addr_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.67ns)   --->   "%store_ln14 = store i32 %tmp_4, i3 %tmp_elements_addr_5" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 26 'store' 'store_ln14' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
+
+State 4 <SV = 3> <Delay = 0.67>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i288 %input_r, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_elements_addr_6 = getelementptr i32 %tmp_elements, i64 0, i64 6" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 28 'getelementptr' 'tmp_elements_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.67ns)   --->   "%store_ln14 = store i32 %tmp_5, i3 %tmp_elements_addr_6" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 29 'store' 'store_ln14' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_elements_addr_7 = getelementptr i32 %tmp_elements, i64 0, i64 7" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 30 'getelementptr' 'tmp_elements_addr_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.67ns)   --->   "%store_ln14 = store i32 %tmp_6, i3 %tmp_elements_addr_7" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 31 'store' 'store_ln14' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%ret_ln14 = ret i32 %tmp_elements_num" [serialize_nobubbles/questionare.cpp:14]   --->   Operation 32 'ret' 'ret_ln14' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.677ns
+The critical path consists of the following:
+	axis read operation ('tmp', /proj/gsd/vivado/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'input_r' (/proj/gsd/vivado/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [4]  (0 ns)
+	'store' operation ('store_ln14', serialize_nobubbles/questionare.cpp:14) of variable 'trunc_ln14', serialize_nobubbles/questionare.cpp:14 on array 'tmp_elements' [7]  (0.677 ns)
+
+ <State 2>: 0.677ns
+The critical path consists of the following:
+	'getelementptr' operation ('tmp_elements_addr_2', serialize_nobubbles/questionare.cpp:14) [12]  (0 ns)
+	'store' operation ('store_ln14', serialize_nobubbles/questionare.cpp:14) of variable 'tmp_1', serialize_nobubbles/questionare.cpp:14 on array 'tmp_elements' [13]  (0.677 ns)
+
+ <State 3>: 0.677ns
+The critical path consists of the following:
+	'getelementptr' operation ('tmp_elements_addr_4', serialize_nobubbles/questionare.cpp:14) [18]  (0 ns)
+	'store' operation ('store_ln14', serialize_nobubbles/questionare.cpp:14) of variable 'tmp_3', serialize_nobubbles/questionare.cpp:14 on array 'tmp_elements' [19]  (0.677 ns)
+
+ <State 4>: 0.677ns
+The critical path consists of the following:
+	'getelementptr' operation ('tmp_elements_addr_6', serialize_nobubbles/questionare.cpp:14) [24]  (0 ns)
+	'store' operation ('store_ln14', serialize_nobubbles/questionare.cpp:14) of variable 'tmp_5', serialize_nobubbles/questionare.cpp:14 on array 'tmp_elements' [25]  (0.677 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

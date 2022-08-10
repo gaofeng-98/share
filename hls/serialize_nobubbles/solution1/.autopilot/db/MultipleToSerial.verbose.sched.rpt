@@ -1,0 +1,152 @@
+
+
+================================================================
+== Vitis HLS Report for 'MultipleToSerial'
+================================================================
+* Date:           Tue Aug  2 23:46:31 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        serialize_nobubbles
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.829 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max   | min | max |   Type   |
+    +---------+---------+-----------+----------+-----+-----+----------+
+    |        5|       14|  50.000 ns|  0.140 us|    4|   11|  dataflow|
+    +---------+---------+-----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp_elements = alloca i64 1"   --->   Operation 7 'alloca' 'tmp_elements' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 8 [2/2] (0.00ns)   --->   "%tmp_elements_num_loc_channel = call i32 @Block_entry4_proc2, i288 %input_r, i32 %tmp_elements"   --->   Operation 8 'call' 'tmp_elements_num_loc_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 9 [1/2] (0.00ns)   --->   "%tmp_elements_num_loc_channel = call i32 @Block_entry4_proc2, i288 %input_r, i32 %tmp_elements"   --->   Operation 9 'call' 'tmp_elements_num_loc_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 4 <SV = 3> <Delay = 2.82>
+ST_4 : Operation 10 [2/2] (2.82ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_16_1_proc, i32 %tmp_elements_num_loc_channel, i32 %tmp_elements, i32 %output_r"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 2.82> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 11 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_16_1_proc, i32 %tmp_elements_num_loc_channel, i32 %tmp_elements, i32 %output_r"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 12 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln9 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_1" [serialize_nobubbles/questionare.cpp:9]   --->   Operation 12 'specdataflowpipeline' 'specdataflowpipeline_ln9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 13 [1/1] (0.00ns)   --->   "%spectopmodule_ln5 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [serialize_nobubbles/questionare.cpp:5]   --->   Operation 13 'spectopmodule' 'spectopmodule_ln5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i288 %input_r, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i288 %input_r"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %output_r, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %output_r"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln20 = ret" [serialize_nobubbles/questionare.cpp:20]   --->   Operation 18 'ret' 'ret_ln20' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 2.83ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'Loop_VITIS_LOOP_16_1_proc' [11]  (2.83 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

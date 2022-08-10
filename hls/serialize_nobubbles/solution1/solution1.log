@@ -1,0 +1,168 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu15eg-ffvb1156-2-i 
+INFO: [HLS 200-1611] Setting target device to 'xczu15eg-ffvb1156-2-i'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_interface -m_axi_max_widen_bitwidth=128 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 750.066 MB.
+INFO: [HLS 200-10] Analyzing design file 'serialize_nobubbles/questionare.cpp' ... 
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:711:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:716:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:721:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:726:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:731:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:736:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:741:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:746:9)
+WARNING: [HLS 207-5527] 'factor' in '#pragma HLS array_reshape' is ignored (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:759:47)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (serialize_nobubbles/questionare.cpp:14:15)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (serialize_nobubbles/questionare.cpp:9:9)
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file serialize_nobubbles/questionare.cpp
+WARNING: [HLS 207-5292] unused parameter 'src' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:517:30)
+WARNING: [HLS 207-5292] unused parameter '_data' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:528:30)
+WARNING: [HLS 207-5292] unused parameter 'index' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:541:14)
+WARNING: [HLS 207-5292] unused parameter 'index' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:552:20)
+WARNING: [HLS 207-5292] unused parameter 'dst' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:785:101)
+WARNING: [HLS 207-5292] unused parameter 'stride' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1043:41)
+WARNING: [HLS 207-5292] unused parameter 'index' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1232:102)
+WARNING: [HLS 207-5292] unused parameter 'stride' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1294:41)
+WARNING: [HLS 207-5292] unused parameter 'index' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1538:34)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 5.84 seconds. CPU system time: 0.84 seconds. Elapsed time: 6.98 seconds; current allocated memory: 756.246 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.35 seconds. CPU system time: 0.63 seconds. Elapsed time: 4.13 seconds; current allocated memory: 756.246 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 756.246 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 756.801 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 756.836 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_16_1' (serialize_nobubbles/questionare.cpp:17) in function 'MultipleToSerial' automatically.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_16_1_proc' (serialize_nobubbles/questionare.cpp:17) to a process function for dataflow in function 'MultipleToSerial'.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'MultipleToSerial' (serialize_nobubbles/questionare.cpp:6)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+INFO: [XFORM 203-712] Applying dataflow to function 'MultipleToSerial' (serialize_nobubbles/questionare.cpp:6), detected/extracted 2 process function(s): 
+	 'Block_entry4_proc2'
+	 'Loop_VITIS_LOOP_16_1_proc'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 778.438 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'tmp.elements' (serialize_nobubbles/questionare.cpp:14:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 787.938 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'MultipleToSerial' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_entry4_proc2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.13 seconds; current allocated memory: 788.945 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 788.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_16_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_16_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_16_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 789.242 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101]==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu15eg-ffvb1156-2-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_max_widen_bitwidth=0
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=128
+INFO: [HLS 200-1510] Running: set_part xczu15eg-ffvb1156-2-i 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_max_widen_bitwidth=128 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 752.820 MB.
+INFO: [HLS 200-10] Analyzing design file 'serialize_nobubbles/questionare.cpp' ... 
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:711:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:716:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:721:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:726:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:731:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:736:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:741:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:746:9)
+WARNING: [HLS 207-5527] 'factor' in '#pragma HLS array_reshape' is ignored (../libs/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:759:47)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (serialize_nobubbles/questionare.cpp:14:15)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (serialize_nobubbles/questionare.cpp:9:9)
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file serialize_nobubbles/questionare.cpp
+WARNING: [HLS 207-5292] unused parameter 'src' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:517:30)
+WARNING: [HLS 207-5292] unused parameter '_data' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:528:30)
+WARNING: [HLS 207-5292] unused parameter 'index' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:541:14)
+WARNING: [HLS 207-5292] unused parameter 'index' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:552:20)
+WARNING: [HLS 207-5292] unused parameter 'dst' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:785:101)
+WARNING: [HLS 207-5292] unused parameter 'stride' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1043:41)
+WARNING: [HLS 207-5292] unused parameter 'index' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1232:102)
+WARNING: [HLS 207-5292] unused parameter 'stride' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1294:41)
+WARNING: [HLS 207-5292] unused parameter 'index' (../libs/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1538:34)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 5.84 seconds. CPU system time: 0.64 seconds. Elapsed time: 6.79 seconds; current allocated memory: 756.523 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.6 seconds. CPU system time: 0.52 seconds. Elapsed time: 4.26 seconds; current allocated memory: 756.523 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 756.523 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 757.004 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 757.039 MB.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_16_1_proc' (serialize_nobubbles/questionare.cpp:18) to a process function for dataflow in function 'MultipleToSerial'.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'MultipleToSerial' (serialize_nobubbles/questionare.cpp:6)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+INFO: [XFORM 203-712] Applying dataflow to function 'MultipleToSerial' (serialize_nobubbles/questionare.cpp:6), detected/extracted 2 process function(s): 
+	 'Block_entry4_proc2'
+	 'Loop_VITIS_LOOP_16_1_proc'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 779.254 MB.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1 for loop 'VITIS_LOOP_16_1' in function 'Loop_VITIS_LOOP_16_1_proc'.
+INFO: [HLS 200-472] Inferring partial write operation for 'tmp.elements' (serialize_nobubbles/questionare.cpp:14:13)
+WARNING: [HLS 200-959] Unable to rewind loop 'VITIS_LOOP_16_1' (serialize_nobubbles/questionare.cpp:18) in function 'Loop_VITIS_LOOP_16_1_proc': initialization section preceding the loop contains control flow.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 788.504 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'MultipleToSerial' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_entry4_proc2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.12 seconds; current allocated memory: 789.555 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 789.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_16_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_16_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_16_1'
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln16_1_fu_80_p2" SOURCE="serialize_nobubbles/questionare.cpp:16" VARIABLE="icmp_ln16_1" MODULE="Loop_VITIS_LOOP_16_1_proc" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="i_fu_91_p2" SOURCE="serialize_nobubbles/questionare.cpp:16" VARIABLE="i" MODULE="Loop_VITIS_LOOP_16_1_proc" LOOP="VITIS_LOOP_16_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln16_fu_101_p2" SOURCE="serialize_nobubbles/questionare.cpp:16" VARIABLE="icmp_ln16" MODULE="Loop_VITIS_LOOP_16_1_proc" LOOP="VITIS_LOOP_16_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="storage" DISPLAY="bind_storage ram_t2p" ID="" IMPL="auto" LATENCY="1" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="tmp_elements_U" SOURCE="" VARIABLE="tmp_elements" MODULE="MultipleToSerial" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op fifo" ID="" IMPL="srl" LATENCY="0" OPTYPE="fifo" PRAGMA="" RTLNAME="tmp_elements_num_loc_channel_U" SOURCE="" VARIABLE="tmp_elements_num_loc_channel" MODULE="MultipleToSerial" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

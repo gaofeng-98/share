@@ -1,0 +1,95 @@
+#-----------------------------------------------------------
+# xsim v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Aug  2 23:47:29 2022
+# Process ID: 2536855
+# Current directory: /group/techsup/gaofengz/hls_work/serialize_nobubbles/solution1/sim/verilog
+# Command line: xsim -source {xsim.dir/MultipleToSerial/xsim_script.tcl}
+# Log file: /group/techsup/gaofengz/hls_work/serialize_nobubbles/solution1/sim/verilog/xsim.log
+# Journal file: /group/techsup/gaofengz/hls_work/serialize_nobubbles/solution1/sim/verilog/xsim.jou
+# Running On: xsjapps58, OS: Linux, CPU Frequency: 2237.809 MHz, CPU Physical cores: 32, Host memory: 810010 MB
+#-----------------------------------------------------------
+start_gui
+source xsim.dir/MultipleToSerial/xsim_script.tcl
+# set_param project.enableReportConfiguration 0
+# load_feature core
+# current_fileset
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /proj/gsd/vivado/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /proj/gsd/vivado/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /proj/gsd/vivado/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /proj/gsd/vivado/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /proj/gsd/vivado/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /proj/gsd/vivado/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/proj/gsd/vivado/Vivado/2022.1/data/ip'.
+current_fileset: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 12055.066 ; gain = 675.109 ; free physical = 202492 ; free virtual = 725175
+# xsim {MultipleToSerial} -view {{MultipleToSerial_dataflow_ana.wcfg}} -tclbatch {MultipleToSerial.tcl} -protoinst {MultipleToSerial.protoinst}
+INFO: [Wavedata 42-565] Reading protoinst file MultipleToSerial.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial//AESL_inst_MultipleToSerial_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/Block_entry4_proc2_U0/Block_entry4_proc2_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/Loop_VITIS_LOOP_16_1_proc_U0/Loop_VITIS_LOOP_16_1_proc_U0_activity
+Time resolution is 1 ps
+open_wave_config MultipleToSerial_dataflow_ana.wcfg
+source MultipleToSerial.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(axis) -into $coutputgroup]
+## add_wave /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/output_r_TREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/output_r_TVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/output_r_TDATA -into $return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set return_group [add_wave_group return(axis) -into $cinputgroup]
+## add_wave /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/input_r_TREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/input_r_TVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/input_r_TDATA -into $return_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/ap_start -into $blocksiggroup
+## add_wave /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/ap_done -into $blocksiggroup
+## add_wave /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/ap_ready -into $blocksiggroup
+## add_wave /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/ap_idle -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/ap_rst_n -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_MultipleToSerial_top/AESL_inst_MultipleToSerial/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_MultipleToSerial_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_MultipleToSerial_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_MultipleToSerial_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_MultipleToSerial_top/LENGTH_input_r -into $tb_portdepth_group -radix hex
+## add_wave /apatb_MultipleToSerial_top/LENGTH_output_r -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(axis) -into $tbcoutputgroup]
+## add_wave /apatb_MultipleToSerial_top/output_r_TREADY -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_MultipleToSerial_top/output_r_TVALID -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_MultipleToSerial_top/output_r_TDATA -into $tb_return_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(axis) -into $tbcinputgroup]
+## add_wave /apatb_MultipleToSerial_top/input_r_TREADY -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_MultipleToSerial_top/input_r_TVALID -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_MultipleToSerial_top/input_r_TDATA -into $tb_return_group -radix hex
+## save_wave_config MultipleToSerial.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 2 [0.00%] @ "125000"
+find kernel block.
+// RTL Simulation : 1 / 2 [50.00%] @ "265000"
+// RTL Simulation : 2 / 2 [100.00%] @ "365000"
+////////////////////////////////////////////////////////////////////////////////////
+fifo pair has unknown value.
+$finish called at time : 425 ns : File "/group/techsup/gaofengz/hls_work/serialize_nobubbles/solution1/sim/verilog/MultipleToSerial.autotb.v" Line 247
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Aug  2 23:49:30 2022...
