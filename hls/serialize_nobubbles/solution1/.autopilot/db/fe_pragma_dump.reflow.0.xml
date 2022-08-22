@@ -1,9 +1,0 @@
-<pragmas>
-<pragma file="/proj/gsd/vivado/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="154" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
-<pragma file="serialize_nobubbles/questionare.cpp" line="9" pragmaType="dataflow" parentfunction="MultipleToSerial" disable_start_propagation="0"/>
-<pragma file="serialize_nobubbles/questionare.cpp" line="17" pragmaType="pipeline" parentfunction="MultipleToSerial" off="0" ii="-1" rewind="1" style=""/>
-<pragma file="serialize_nobubbles/questionare.cpp" line="10" pragmaType="interface" parentfunction="MultipleToSerial" mode="axis" port="input" register="1" register_mode="both" name="" depth="-1"/>
-<pragma file="serialize_nobubbles/questionare.cpp" line="11" pragmaType="interface" parentfunction="MultipleToSerial" mode="axis" port="output" register="1" register_mode="both" name="" depth="-1"/>
-<pragma file="/proj/gsd/vivado/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="173" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
-<pragma file="/proj/gsd/vivado/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="144" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
-</pragmas>

@@ -1,1 +1,0 @@
-set ::AESL_AUTOSIM::gTopFileName /group/techsup/gaofengz/hls_work/serialize_nobubbles/solution1/./sim/autowrap/testbench/questionare.cpp_pre.cpp.tb.cpp

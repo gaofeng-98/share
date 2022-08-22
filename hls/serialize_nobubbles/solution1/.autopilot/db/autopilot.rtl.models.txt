@@ -1,8 +1,0 @@
-MultipleToSerial_regslice_both
-MultipleToSerial_regslice_both
-MultipleToSerial_tmp_elements_RAM_AUTO_1R1W_memcore
-MultipleToSerial_tmp_elements_RAM_AUTO_1R1W
-MultipleToSerial_fifo_w32_d2_S
-Block_entry4_proc2
-Loop_VITIS_LOOP_16_1_proc
-MultipleToSerial

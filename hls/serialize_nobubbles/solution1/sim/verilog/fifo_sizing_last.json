@@ -1,6 +1,0 @@
-{
-"fifo_info" : [
-{"inst" : "AESL_inst_MultipleToSerial.tmp_elements_num_loc_channel_U", "depth" : 6, "input_block" : 0, "output_block" : 0, "work_scenario" : 0, "chan_type" : 1},
-],
-"lat_total" : 22
-}
